@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday — Mama Ponnu ❤️</title>
+  <style>
+    :root{--bg1:#fff0f6;--bg2:#fff7f0;--card:#ffffffee;--accent:#e11d48}
+    html,body{height:100%;margin:0;font-family:Inter, Poppins, system-ui, -apple-system, 'Segoe UI', Roboto, Arial}
+    body{
+      background: radial-gradient(circle at 10% 10%, #fff0f6, transparent 20%),
+                  radial-gradient(circle at 90% 90%, #fff7f0, transparent 20%),
+                  linear-gradient(135deg,#fff7fb 0%, #fffef8 100%);
+      display:flex;align-items:center;justify-content:center;padding:28px;
+    }
+    .card{
+      width:100%;max-width:780px;background:var(--card);border-radius:18px;padding:30px;box-shadow:0 18px 50px rgba(0,0,0,0.12);
+      text-align:center;position:relative;overflow:hidden
+    }
+    h1{font-size:2rem;margin:6px 0;color:var(--accent)}
+    .line{margin:12px 0;font-size:1.02rem;color:#2b2730;line-height:1.5}
+    .tam{display:block;margin-top:6px;color:#7c3a46;font-weight:600}
+
+    /* Exact heart SVG with beating and glow */
+    .heart-wrap{display:flex;align-items:center;justify-content:center;margin:18px 0;gap:18px}
+    .heart-svg{width:140px;height:140px;cursor:pointer;filter:drop-shadow(0 14px 30px rgba(225,29,72,0.18))}
+    .beat{transform-origin:center center;animation:beat 1s infinite ease-in-out}
+    @keyframes beat{
+      0%{transform:scale(0.97);filter:drop-shadow(0 8px 18px rgba(225,29,72,0.12))}
+      30%{transform:scale(1.14)}
+      45%{transform:scale(1.04)}
+      100%{transform:scale(0.97)}
+    }
+
+    /* small hearts rising */
+    .particle{position:absolute;font-size:18px;opacity:0;animation:rise 6s linear infinite}
+    .p1{left:10%;bottom:8%;animation-delay:0s}
+    .p2{left:26%;bottom:6%;animation-delay:1s}
+    .p3{right:18%;bottom:4%;animation-delay:0.6s}
+    .p4{right:30%;bottom:10%;animation-delay:2s}
+    @keyframes rise{
+      0%{transform:translateY(0) scale(0.8);opacity:0}
+      10%{opacity:1}
+      60%{opacity:0.9}
+      100%{transform:translateY(-420px) scale(1.2);opacity:0}
+    }
+
+    .controls{display:flex;gap:10px;justify-content:center;margin-top:14px}
+    .btn{background:#fff;border:1px solid #ffecf0;padding:8px 14px;border-radius:999px;cursor:pointer;font-weight:600}
+    .btn.play{background:linear-gradient(90deg,#ff7aa2,#ff4d8a);color:#fff;border:0}
+    .note{font-size:0.86rem;color:#7a5368;margin-top:10px}
+    footer{font-size:0.86rem;color:#7a5368;margin-top:18px}
+
+    ul.points{list-style:none;padding:0;margin:14px 0 0 0;text-align:left;display:inline-block}
+    ul.points li{background:#fff0f6;padding:10px 14px;border-radius:12px;margin:8px 0;min-width:260px}
+
+    @media (max-width:520px){.heart-svg{width:100px;height:100px}.card{padding:18px}}
+  </style>
+</head>
+<body>
+  <div class="card" id="card">
+    <div class="particle p1">💗</div>
+    <div class="particle p2">💕</div>
+    <div class="particle p3">💖</div>
+    <div class="particle p4">❤️</div>
+
+    <h1>Happy Birthday, My Mama Ponnu</h1>
+
+    <div class="heart-wrap">
+      <!-- Exact heart SVG path for crisp heart shape -->
+      <svg class="heart-svg beat" id="heartSVG" viewBox="0 0 512 512" aria-hidden="true">
+        <path fill="#e11d48" d="M471.701,73.007c-54.431-46.568-136.391-38.494-186.894,12.196L256,114.01l-28.806-28.807
+          c-50.504-50.69-132.464-58.764-186.895-12.196C-12.112,120.345-10.614,217.12,43.47,271.204l184.53,184.53
+          c12.497,12.497,32.758,12.497,45.255,0l184.53-184.53C522.614,217.12,524.112,120.345,471.701,73.007z" />
+      </svg>
+    </div>
+
+    <!-- Alternating English and Tamil lines (new words as requested) -->
+    <div class="line">
+      I've never been bored of you.
+      <span class="tam">நான் உன்னோடு ஒன்றும் சலிப்படவில்லை.</span>
+    </div>
+
+    <div class="line">
+      Situations may separate us and we may not always talk, but I always think about you.
+      <span class="tam">சிக்கல்கள் நம்மை பிரிக்கலாம், பேசாமலும் இருக்கலாம், ஆனால் நான் எப்போதும் about உன்னை நினைக்கிறேன்.</span>
+    </div>
+
+    <div class="line">
+      You are always in my hand like my watch.
+      <span class="tam">நீ எப்போதும் என் கையில் உள்ளாய்; என் கடிகாரம் போல.</span>
+    </div>
+
+    <div class="line">
+      The watch you gave me is always on my hand.
+      <span class="tam">நீ கொடுத்த கடிகாரம் எப்போதும் என் கையில் இருக்கிறது.</span>
+    </div>
+
+    <div class="line">
+      Whatever happens, don't leave me — I completely depend on your words.
+      <span class="tam">என்ன நடந்தாலும், என்னைவிட்டு போகாதே — நான் முழுமையாக உன் வார்த்தைகளில் நம்பிக்கை வைப்பேன்.</span>
+    </div>
+
+    <!-- Extra birthday points for her -->
+    <ul class="points" aria-label="Birthday points">
+      <li><strong>Always my sunrise:</strong> May your days be filled with light and new beginnings.<br><span class="tam">எப்போதும் என் காலை — உன் நாள்கள் இன்பம் நிறைந்ததாக இருக்கட்டும்.</span></li>
+      <li><strong>Joy and Laughter:</strong> I promise to bring more smiles and silly moments to you.<br><span class="tam">இனிமையும் சிரிப்பும் — நான் உனக்கு அதிகம் சிரிப்புகளும் மகிழ்ச்சிகளும் தருவேன்.</span></li>
+      <li><strong>Protection and Promise:</strong> I will protect you and keep choosing you, every day.<br><span class="tam">பாதுகாப்பும் வாக்குறுதிப்பும் — நான் உன்னை பாதுகாக்கிறேன், எந்நாளும் உன்னைத் தேர்ந்தெடுப்பேன்.</span></li>
+      <li><strong>My Gratitude:</strong> Thank you for believing in me and staying with me.<br><span class="tam">என் நன்றிகள் — என்னை நம்பியதும் என்னுடன் இருந்து கொண்டதுக்கும் நன்றி.</span></li>
+    </ul>
+
+    <div class="controls">
+      <button class="btn play" id="playBtn">Play Mama Ponnu song</button>
+      <button class="btn" id="pauseBtn">Pause</button>
+    </div>
+    <div class="note">Tip: Upload <code>mama-ponnu-song.mp3</code> in the same folder. Tap the heart or Play to start (browser requires interaction).</div>
+
+    <audio id="bgAudio" loop>
+      <source src="mama-ponnu-song.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <footer>Put the HTML (index.html) and <code>mama-ponnu-song.mp3</code> in the repo and enable GitHub Pages to publish the link.</footer>
+  </div>
+
+  <script>
+    const audio = document.getElementById('bgAudio');
+    const playBtn = document.getElementById('playBtn');
+    const pauseBtn = document.getElementById('pauseBtn');
+    const heartSVG = document.getElementById('heartSVG');
+
+    function playAudio(){
+      audio.play().catch(()=>{});
+      playBtn.textContent = 'Playing...';
+    }
+    function pauseAudio(){
+      audio.pause();
+      playBtn.textContent = 'Play Mama Ponnu song';
+    }
+
+    playBtn.addEventListener('click', playAudio);
+    pauseBtn.addEventListener('click', pauseAudio);
+
+    heartSVG.addEventListener('click', ()=>{
+      if(audio.paused) playAudio(); else pauseAudio();
+      // a quick scale pop to feel interactive
+      heartSVG.classList.remove('beat');
+      void heartSVG.offsetWidth;
+      heartSVG.classList.add('beat');
+    });
+  </script>
+</body>
+</html>
